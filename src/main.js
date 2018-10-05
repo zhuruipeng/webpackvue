@@ -9,7 +9,7 @@ import './lib/mui/css/mui.css'
 Vue.component(Header.name, Header);
 
 var vm = new Vue({
-  el:'#app',  
+  el:'#app',
   data:{},
     render:function (Creamenthtml) {
         return Creamenthtml(app1)
