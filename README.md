@@ -3,11 +3,11 @@
 + 知识点用了很多
   - mui  mui-master  vue webpack 等等
 [开原协议](http://www.baidu.com)
-==by 朱瑞鹏 2018年10月5日16:24:32==
 
-git add.
-git commit-m 'tijiao'
-
-git push
-
-1、完成tabbar
+**by朱瑞鹏 2018年10月5日16:24:32**
++ git add.
++ git commit-m 'tijiao'
++ git push
++ 1、完成tabbar
++ 2.改造tabbar为router-link
++ 3.点击tabbar中的路由链接改为组件
