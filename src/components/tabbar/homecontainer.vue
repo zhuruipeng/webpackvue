@@ -10,9 +10,9 @@
 
         <ul class="mui-table-view mui-grid-view mui-grid-9">
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                <a href="#">
+                <router-link to="/home/newslist">
                     <img src="../../imgs/menu1.png" alt="">
-                <div class="mui-media-body">新闻资讯</div></a></li>
+                <div class="mui-media-body">新闻资讯</div></router-link></li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                 <a href="#">
                     <img src="../../imgs/menu2.png" alt="">
@@ -39,24 +39,24 @@
 export  default {
     data(){
         return{
-            // lunbotulist:[]
+            lunbotulist:[]
 
         }
     },
     created(){
-        // this.gteLunbotu()
+        this.gteLunbotu()
     },
     methods:{
-        // gteLunbotu(){//获取轮播图数据方法
-        //     this.$http.get('http://vue.studyit.io/api/getlunbo').then(result=>{
-        //   //console.log(result.body)
-        //         if(result.body.status===0){
-        //             this.lunbotulist=result.body.message;
-        //         }else{
-        //             Toast('加载轮播图失败')
-        //         }
-        //     });
-        // }
+        gteLunbotu(){//获取轮播图数据方法
+            this.$http.get('api/getlunbo').then(result=>{
+          //console.log(result.body)
+                if(result.body.status===0){
+                    this.lunbotulist=result.body.message;
+                }else{
+                    Toast('加载轮播图失败')
+                }
+            });
+        }
     }
 }
 </script>

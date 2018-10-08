@@ -4,12 +4,17 @@ import homecontainer from './components/tabbar/homecontainer.vue'
 import membercontainer from './components/tabbar/membercontainer.vue'
 import shopcarcontainer from './components/tabbar/shopcarcontainer.vue'
 import searchcontainer from './components/tabbar/searchcontainer.vue'
+import newslist  from  './components/news/newslist.vue'
+import newsinfo from './components/news/newsinfo.vue'
 var router = new VueRouter({
   routes: [
       {path:'/home',component:homecontainer},
       {path:'/member',component:membercontainer},
       {path:'/chart',component:shopcarcontainer},
       {path:'/search',component:searchcontainer},
+      {path:'/search',component:searchcontainer},
+      {path:'/home/newslist',component:newslist},
+      {path:'/home/newinfo/:id',component:newsinfo},
 
 
 
