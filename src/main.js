@@ -16,6 +16,7 @@ import  vueResouce from 'vue-resource'
 Vue.use(vueResouce)
 //全局配置
 Vue.http.options.root = 'http://vue.studyit.io';
+Vue.http.options.emulateJSON = true;
 //定义全局过滤器
 //导入时间插件
 import moment from 'moment'
@@ -23,13 +24,27 @@ Vue.filter('dateFormat',function (dataStr,patter='YYYY-MM-DD HH:mm:ss') {
     return moment(dataStr).format(patter)
 })
 
-import { Header, Swipe, SwipeItem  Button} from 'mint-ui';
+import MintUI from 'mint-ui'
+Vue.use(MintUI)
+// import 'nint-ui/lib/style.css'
 
+import { Header, Swipe, SwipeItem,  Button} from 'mint-ui';
 import './lib/mui/css/mui.css'
 Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Button.name,Button);
+//
+// //懒加载
+import { Lazyload } from 'mint-ui';
+
+Vue.use(Lazyload);
+
+
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+
+
 
 var vm = new Vue({
   el:'#app',
